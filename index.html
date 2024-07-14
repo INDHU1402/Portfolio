@@ -24,14 +24,14 @@
         overflow: hidden;
       }
       .section:nth-child(odd) {
-        background: url('https://getwallpapers.com/wallpaper/full/9/6/3/1172809-widescreen-developer-wallpaper-hd-1920x1080-tablet.jpg') no-repeat center center;
+        background: url('https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock--1455.jpg') no-repeat center center;
         background-size: cover;
-        animation: zoomInOut 10s infinite alternate;
+        animation: zoomInOut 15s infinite alternate;
       }
       .section:nth-child(even) {
-        background: url('https://images.hdqwalls.com/download/landscape-minimal-panaromic-8k-97-1280x1024.jpg') no-repeat center center;
+        background: url('https://www.bhmpics.com/downloads/terminal-Wallpapers/30.high_resolution_wallpaper_background_id_77701499596.jpg') no-repeat center center;
         background-size: cover;
-        animation: zoomInOut 10s infinite alternate;
+        animation: zoomInOut 15s infinite alternate;
       }
       @keyframes zoomInOut {
         0% { transform: scale(1); }
@@ -68,16 +68,13 @@
         margin-bottom: 10px;
       }
       #home .title {
-        animation: drop-from-top 1s ease forwards;
+        animation: drop-from-top 2s ease forwards;
       }
       #about .title {
-        animation: drop-from-top 1s ease forwards;
-      }
-      #contact .title {
-        animation: drop-from-top 1s ease forwards;
+        animation: drop-from-top 2s ease forwards;
       }
       #code .title {
-        animation: drop-from-top 1s ease forwards;
+        animation: drop-from-top 2s ease forwards;
       }
       @keyframes drop-from-top {
         from { transform: translateY(-50px); opacity: 0; }
@@ -90,8 +87,8 @@
         margin: 0 auto;
         letter-spacing: .15em;
         animation: 
-          typing 3.5s steps(40, end),
-          blink-caret .75s step-end infinite;
+          typing 4.0s steps(40, end),
+          blink-caret .45s step-end infinite;
       }
       @keyframes typing {
         from { width: 0 }
@@ -181,21 +178,61 @@
         from { width: 0; }
         to { width: 100%; }
       }
+
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      .flip-card-back {
+        background-color: black;
+        color: white;
+        transform: rotateY(180deg);
+      }
+
     </style>
     </head>
     <body>
     <nav class="menu">
       <a href="#home"><i class="fas fa-home icon"></i></a>
       <a href="#about"><i class="fas fa-info-circle icon"></i></a>
-      <a href="#contact"><i class="fas fa-envelope icon"></i></a>
       <a href="#code"><i class="fas fa-code icon"></i></a>
     </nav>
     <section id="home" class="section">
       <div class="background-image"></div>
       <div class="title">
         <div class="typewriter" style="width: 600px; margin: 0 auto;">
-          <h1>Hello There...</h1>
-          <p>I'm Indhu, Software Engineer @Google | Ex-Microsoft | Ex-Vmware => thanks for visiting my page. </p>
+          <h1>Hello there...</h1>
+          <p>I'm Indhu, Software Engineer @Google | Ex-Microsoft | Ex-Vmware and thanks for visiting my page. </p>
         </div>
       </div>
     </section>
@@ -211,36 +248,32 @@
           <a href="http://twitter.com/phoenix27589"><i class="fab fa-twitter"></i></a>
           <a href="https://www.linkedin.com/in/indhu-shivani-palagiri-9b0a61174/"><i class="fab fa-linkedin"></i></a>
           <a href="https://learningscientists.blogspot.com"><i class="fas fa-blog"></i></a>
-        </div>
-      </div>
-    </section>
-    <section id="contact" class="section">
-      <div class="background-image"></div>
-      <div class="title">
-        <h1>Contact Me</h1>
-        <br><br>
-        <div class="contact-form">
-          <form action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name">
-            <input type="email" name="email" placeholder="Your Email">
-            <textarea name="message" placeholder="Your Message"></textarea>
-            <br><br><br>
-            <input type="submit" value="Send">
-          </form>
+          <a href="mailto:indhushivanip2001@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
     </section>
     <section id="code" class="section">
       <div class="background-image"></div>
       <div class="title">
-        <h1>Few of my works :)</h1>
-        <br><br><br><br>
-        <div class="card">
-            <img src="https://cdn.prod.website-files.com/63c5e29f1b5bc83fe0af2489/6424d753f8eb7a9e69c372fc_Gantt%20Chart%20Online%20Software%20Instagantt%20Ideation%202.webp" alt="Avatar" style="width:100%">
-            <div class="container">
-              <h4><b>Russell</b></h4> 
-              <p>Rust + Haskell + command line</p> 
+        <h1>My works</h1>
+        <br><br>
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="" alt="Avatar" style="width:300px;height:300px;">
             </div>
+            <div class="flip-card-back">
+              <br><br>
+              <h2>Russell</h2> 
+              <br>
+              <p>A command line CSV-toolkit built in Haskell and Rust.
+                Inspired from the book named - Data Science at the
+                Command line by Jeroen Janssens.</p> 
+                <br>
+              <p>Know more</p>
+            </div>
+          </div>
         </div>
 
       </div>
